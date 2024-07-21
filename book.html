@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light text-dark">
+    <div class="container mt-5">
+      <h1 class="text-center text-primary">Book an Appointment</h1>
+      <div id="calendar-container" class="text-center">
+        <input
+          id="calendar"
+          class="form-control d-inline-block"
+          style="width: 300px"
+          placeholder="Select a date"
+        />
+      </div>
+      <div id="times-container" class="list-group mt-4 d-none">
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          10:00 AM
+        </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          11:00 AM
+        </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          12:00 PM
+        </button>
+        <!-- Add more time slots as needed -->
+      </div>
+      <div id="confirmation-container" class="text-center mt-4 d-none">
+        <h3 class="text-success" id="confirmation-message">
+          Appointment Confirmed
+        </h3>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Flatpickr for the calendar input
+        flatpickr("#calendar", {
+          onChange: function (selectedDates, dateStr, instance) {
+            document
+              .getElementById("times-container")
+              .classList.remove("d-none");
+          },
+        });
+
+        // Get the advisor name from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const advisor = urlParams.get("advisor");
+
+        // Function to handle booking a time slot
+        window.bookTimeSlot = function (element) {
+          const time = element.innerText;
+          element.classList.add("disabled");
+          element.classList.add("bg-secondary"); // Add this line to grey out the button
+          element.setAttribute("aria-disabled", "true");
+          document.getElementById("times-container").classList.add("d-none");
+          document
+            .getElementById("confirmation-container")
+            .classList.remove("d-none");
+          document.getElementById(
+            "confirmation-message"
+          ).innerText = `Your appointment with ${advisor} has been confirmed for ${time}.`;
+        };
+      });
+    </script>
+  </body>
+</html>

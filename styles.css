@@ -1,0 +1,45 @@
+body {
+  background-color: #c5d4db;
+  color: #0a212e;
+}
+
+header {
+  background-color: #278abb;
+}
+
+.text-primary {
+  color: #278abb !important;
+}
+
+.card-title {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card-text i {
+  margin-right: 8px;
+}
+
+.list-group-item.disabled,
+.list-group-item[aria-disabled="true"] {
+  background-color: #2f4552 !important;
+  color: #c5d4db !important;
+  pointer-events: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+}

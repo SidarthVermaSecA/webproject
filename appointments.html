@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointments Page</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-light text-dark">
+    <header class="bg-primary text-white text-center py-3">
+      <img
+        src="/images/classlogo-removebg-preview.png"
+        alt="Summit Logo"
+        class="mb-2"
+        style="width: 100px; height: auto"
+      />
+      <h1>Appointment Booking</h1>
+    </header>
+    <div class="container mt-4">
+      <h2 class="text-center text-primary mb-4">Meet Our Advisors</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img src="john_doe.jpg" class="card-img-top" alt="John Doe" />
+            <div class="card-body text-center">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> johndoe@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 416-435-6445</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('John Doe')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img
+              src="philip_defranco.jpg"
+              class="card-img-top"
+              alt="Philip Defranco"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Philip Defranco</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> philipd@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 416-856-6987</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('Philip Defranco')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img
+              src="charlie_white.jpg"
+              class="card-img-top"
+              alt="Charlie White"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Charlie White</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> charliew@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('Charlie White')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img
+              src="vanessa_hudgens.jpg"
+              class="card-img-top"
+              alt="Vanessa Hudgens"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Vanessa Hudgens</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> vanessah@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('Vanessa Hudgens')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img
+              src="charlie_white.jpg"
+              class="card-img-top"
+              alt="Charlie White"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Mark Whalberg</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> charliew@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('Charlie White')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="card flex-fill">
+            <img
+              src="charlie_white.jpg"
+              class="card-img-top"
+              alt="Charlie White"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">John Cena</h5>
+              <p class="card-text">
+                <i class="fas fa-envelope"></i> charliew@summit.ca
+              </p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <button
+                class="btn btn-primary"
+                onclick="bookAppointment('Charlie White')"
+              >
+                View Availability
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      function bookAppointment(advisor) {
+        window.location.href =
+          "book.html?advisor=" + encodeURIComponent(advisor);
+      }
+    </script>
+  </body>
+</html>
