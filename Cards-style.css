@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+h1{
+    font-size: 120px;
+    color: white;
+    padding-left: 20px;
+}
+.my-skills{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(pexels-minan1398-1134188.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin-bottom: 30px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height:100vh;
+    width: 100vw;
+    background-color: peachpuff;
+    border: 1px solid black;
+}
+
+#card{
+    position:inherit;
+    height: 40%;
+    width: 70%;
+    border: 1px solid black;
+    background-color: rgba(0, 153, 255, 0.282);
+    margin: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card1-section1, .card2-section1,.card3-section1,.card4-section1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 255, 0.173);
+}
+
+.card1-image,.card2-image,.card3-image,.card4-image{
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid white;
+}
