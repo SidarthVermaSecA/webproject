@@ -1,0 +1,26 @@
+body {
+    background-color: #d6e6f2;
+}
+
+header {
+    background-color: #2f4f6e;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+.custom-card {
+    background-color: #6996b3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #ffffff;
+}
