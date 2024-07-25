@@ -1,40 +1,43 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summit Bank Application</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesRaman.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <img src="Picture1.png" alt="Summit Bank Logo">
-            <h1>Summit Bank</h1>
+            <img src="BSSS-removebg-preview.png" alt="Summit Bank Logo">
         </div>
     </header>
     <main class="main-content">
         <section class="left-panel">
             <div class="card-info">
                 <h2>You're Applying For:</h2>
-                <img src="blue.png" alt="Summit Blue Mastercard">
-                <h3>Summit Blue Mastercard®</h3>
+                <img src="black.png" alt="Summit Blue Mastercard">
+                <h3>Summit Black Mastercard®</h3>
             </div>
             <div class="card-benefits">
                 <h2>With This Card You Get:</h2>
-                <ul>
-                    <li>Get 2% unlimited cash back on all eligible purchases.</li>
-                    <li>1.5 times more cash back every time you redeem for Summit Bank Investment products.</li>
-                    <li>Get Premium Lounge access at Participating Airports (up to $175 value).</li>
-                    <li>No annual fee.</li>
+                <ul><li>Get 4% unlimited cash back on travel and luxury purchases.</li>
+                    <li>Access to dedicated 24/7 concierge services.</li>
+                    <li>Complimentary global airport lounge access (up to $300 value).</li>
+                    <li>No annual fee for the first year.</li>
                 </ul>
             </div>
-            <div class="button-group">
-                    <button class="btn btn-learn-more" onclick="window.location.href='filefinal.html'">Learn More</button>
-                    <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
-                    <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
-                </div>
+            <div class="navigation-icons">
+                <a href="page1.html" target="_blank" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="Cards-page.html" target="_blank" aria-label="Back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
         </section>
         <section class="right-panel">
             <form id="applicationForm" onsubmit="handleSubmit(event)">
@@ -51,7 +54,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question2">
-                    <h3>What is your full name?</h3>
+                    <h3>What is your Full Name?</h3>
                     <input type="text" name="firstName" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question2', 'question1', 0)">Back</button>
@@ -67,7 +70,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question4">
-                    <h3>What is your email address?</h3>
+                    <h3>What is your Email Address?</h3>
                     <input type="email" name="email" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question4', 'question3', 2)">Back</button>
@@ -75,7 +78,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question5">
-                    <h3>What is your phone number?</h3>
+                    <h3>What is your Phone Number?</h3>
                     <input type="tel" name="phone" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question5', 'question4', 3)">Back</button>
@@ -83,7 +86,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question6">
-                    <h3>What is your date of birth?</h3>
+                    <h3>What is your Date of Birth?</h3>
                     <input type="date" name="dob" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question6', 'question5', 4)">Back</button>
@@ -91,7 +94,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question7">
-                    <h3>What is your address?</h3>
+                    <h3>What is your Address?</h3>
                     <input type="text" name="address" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question7', 'question6', 5)">Back</button>
@@ -99,7 +102,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question8">
-                    <h3>What is your annual income?</h3>
+                    <h3>What is your Annual income?</h3>
                     <input type="number" name="income" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question8', 'question7', 6)">Back</button>
@@ -107,7 +110,7 @@
                     </div>
                 </div>
                 <div class="hidden" id="processing">
-                    <h3>Processing your application...</h3>
+                    <h3>Processing your Application...</h3>
                     <div class="progress-container">
                         <div class="progress-bar" id="progressBar"></div>
                     </div>
@@ -118,14 +121,14 @@
             </form>
         </section>
     </main>
-    <footer>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" target="_blank" aria-label="Disability"><i class="fab fa-accessible-icon"></i></a>
-            </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="Access.html" target="_blank" aria-label="Disability"><i class="fab fa-accessible-icon"></i></a>
+        </div>
     </footer>
     <script>
         let totalQuestions = 8;
@@ -167,7 +170,7 @@
                     width++;
                     progressBar.style.width = width + '%';
                 }
-            }, 50);
+            }, 10);
         }
 
         // Initialize progress bar
