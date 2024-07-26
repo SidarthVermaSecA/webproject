@@ -3,8 +3,9 @@ const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
+const gemini  =document.getElementById("#header");
 
-let userMessage = null; // Variable to store user's message
+let userMessage = " "; // Variable to store user's message
 const API_KEY = "AIzaSyAQYMNgusd0dulb6qFmn-aSStXq8wGqesc"; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
@@ -37,7 +38,7 @@ const generateResponse = (chatElement) => {
 
     // Send POST request to API, get response and set the reponse as paragraph text
     fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
-        messageElement.textContent = result.candidates[0].content.parts[0].text;
+        messageElement.textContent = data.choices[0].message.content.trim();
     }).catch(() => {
         messageElement.classList.add("error");
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
@@ -45,16 +46,19 @@ const generateResponse = (chatElement) => {
 }
 
 const handleChat = () => {
-    userMessage = chatInput.value.trim(); 
+    userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
     if(!userMessage) return;
+
+    // Clear the input textarea and set its height to default
     chatInput.value = "";
     chatInput.style.height = `${inputInitHeight}px`;
 
-    
+    // Append the user's message to the chatbox
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
     
     setTimeout(() => {
+        // Display "Thinking..." message while waiting for the response
         const incomingChatLi = createChatLi("Thinking...", "incoming");
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
@@ -63,11 +67,14 @@ const handleChat = () => {
 }
 
 chatInput.addEventListener("input", () => {
+    // Adjust the height of the input textarea based on its content
     chatInput.style.height = `${inputInitHeight}px`;
     chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
 
 chatInput.addEventListener("keydown", (e) => {
+    // If Enter key is pressed without Shift key and the window 
+    // width is greater than 800px, handle the chat
     if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
         e.preventDefault();
         handleChat();
@@ -86,13 +93,13 @@ const data = {
     {
       parts: [
         {
-          text: "What is a credit card",
+          text: JSON.stringify(userMessage),
         },
       ],
     },
   ],
 };
-
+console.log(JSON.stringify(userMessage));
 fetch(url, {
   method: 'POST',
   headers: {
@@ -102,7 +109,11 @@ fetch(url, {
 })
   .then((response) => response.json())
   .then((result) => {
-    console.log(result.candidates[0].content.parts[0].text);
+    const data = result;
+    const newdata= data.candidates[0].content.parts[0].text;
+    var data_array = newdata.split('.');
+    console.log(data_array[0]);
+    document.getElementById("gemini").textContent=JSON.stringify(data_array[0]);
   })
   .catch((error) => {
     console.error('Error:', error);
