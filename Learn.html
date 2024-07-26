@@ -5,14 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn & Utilize</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #0A212E;
+            --secondary-color: #278ABB;
+            --tertiary-color: #2F4552;
+            --quaternary-color: #C5D4DB;
+            --hover-color: #FFFFFF; /* New color for hover effect */
+        }
+
+        body {
+            background-color: var(--quaternary-color);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border-color: var(--secondary-color);
+        }
+
+        .navbar-toggler-icon {
+            background-color: var(--secondary-color);
+        }
+
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: var(--hover-color); /* Updated hover color */
+        }
+
+        .card-body:hover {
+            background-color: var(--hover-color); /* Updated hover color */
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--tertiary-color);
+            border-color: var(--tertiary-color);
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+        }
+
+        .footer-logo {
+            display: block;
+            margin: 0 auto;
+            height: 80px; /* Adjust the height as needed */
+        }
+
+        .footer img {
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="Summitp1.png" alt="Summit Logo" class="img-fluid me-2" style="height: 80px;">
                 <span class="h4 mb-0">Summit</span>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="investments.html">Investments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="credit_card.html">Credit Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="card_application.html">Card Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="book_appointment.html">Book Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="learn_page.html">Learn Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accessibility.html">Accessibility</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>    
 
@@ -33,7 +135,7 @@
             <!-- Mortgage Calculator -->
             <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
-                    <img src="MortgageCalc.png" class="card-img-top" alt="Mortgage Calculator" style="max-height: 200px; object-fit: cover;">
+                    <img src="MortgageCalcc.jpg" class="card-img-top" alt="Mortgage Calculator" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">Mortgage Calculator</h5>
                         <p class="card-text">Calculate your mortgage payments with ease. Understand the impact of different interest rates, loan amounts, and terms on your monthly payments.</p>
@@ -58,7 +160,7 @@
                     <img src="nwcmrs-en.jpg" class="card-img-top" alt="New to Canada" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">New to Canada</h5>
-                        <p class="card-text">Navigate your new life in Canada with ease. Find resources on housing, employment, healthcare, and more to help you settle smoothly.</p>
+                        <p class="card-text">Discover essential resources and information for newcomers to Canada. Learn about the Canadian financial system, immigration services, and community support.</p>
                         <a href="https://www.canada.ca/en/services/finance/tools.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -69,7 +171,7 @@
                     <img src="goals-1024x576.png" class="card-img-top" alt="Goals" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">Goals</h5>
-                        <p class="card-text">Set and achieve your financial goals. Whether it's saving for a home, retirement, or a dream vacation, we provide tools and tips to help you succeed.</p>
+                        <p class="card-text">Set and achieve your financial goals with practical tips and strategies. Learn how to create a roadmap for success and stay on track.</p>
                         <a href="https://itools-ioutils.fcac-acfc.gc.ca/FGC-COF/home-accueil-eng.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -80,7 +182,7 @@
                     <img src="Bursar_TuitionPaymentPlan_Hero.jpg" class="card-img-top" alt="Students" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">Students</h5>
-                        <p class="card-text">Manage your finances as a student. Get tips on budgeting, saving, and finding scholarships, grants, and other financial aid options.</p>
+                        <p class="card-text">Access valuable resources for students, including financial aid, scholarships, and budgeting tips. Learn how to manage your finances while pursuing your education.</p>
                         <a href="https://www.ontario.ca/page/student-loans-grants-scholarships-and-bursaries" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -90,7 +192,7 @@
 
     <footer class="footer bg-dark text-white text-center py-3">
         <div class="container">
-            <img src="Summitp1.png" alt="Summit Logo" class="footer-logo" style="height: 80px;">
+            <img src="Summitp1.png" alt="Summit Logo" class="footer-logo">
         </div>
     </footer>
 
