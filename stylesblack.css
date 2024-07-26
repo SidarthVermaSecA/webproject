@@ -63,7 +63,7 @@ body {
 }
 
 .card-info h2, .card-benefits h2 {
-    color: #278ABB;
+    color: black;
 }
 
 .card-info img {
@@ -79,7 +79,7 @@ body {
 }
 
 .card-benefits ul li {
-    background: url('Eo_circle_light-blue_checkmark.svg.png') no-repeat left center;
+    background: url('black.jpg') no-repeat left center;
     background-size: 20px;
     padding-left: 30px;
     margin: 10px 0;
@@ -105,7 +105,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #278ABB;
+    background-color: black;
     color: white;
 }
 
@@ -136,7 +136,7 @@ body {
 }
 
 .social-icons a:hover {
-    color: #278ABB;
+    color: black;
 }
 
 .access {
@@ -191,7 +191,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus,
 input[type="number"]:focus {
-    border-color: #007bff; /* Blue border on focus */
+    border-color: black; /* Blue border on focus */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
     outline: none; /* Remove default outline */
 }
@@ -209,7 +209,7 @@ input[type="number"]:focus {
 
 .progress-bar-inner {
     height: 20px;
-    background-color: #278ABB;
+    background-color: black;
     width: 0;
     border-radius: 5px;
     transition: width 0.5s;
