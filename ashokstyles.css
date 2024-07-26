@@ -1,0 +1,39 @@
+body {
+    background-color: #d6e6f2;
+}
+
+header {
+    background-color: #2f4f6e;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+
+.custom-card {
+    background-color: #6996b3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #ffffff;
+}
+.navbar {
+    background-color: #e50000;
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  .navbar-toggler {
+    border-color: var(--secondary-color);
+  }
+  
+  .navbar-toggler-icon {
+    background-color: var(--secondary-color);
+  }
