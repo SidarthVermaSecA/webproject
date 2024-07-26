@@ -5,6 +5,9 @@
     <title>Summit Bank Application</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -30,9 +33,9 @@
                 </ul>
             </div>
             <div class="button-group">
-                <button class="btn btn-learn-more" onclick="window.location.href='filefinal.html'">Learn More</button>
-                <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
-                <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+                <button class="btn btn-learn-more" onclick="window.location.href='filefinal.html'">Investments</button>
+                <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Credit Cards</button>
+                <button class="btn btn-apply-now" onclick="window.location.href='apply-now.html'">Home</button>
             </div>
         </section>
         <section class="right-panel">
@@ -50,7 +53,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question2">
-                    <h3>What is your full name?</h3>
+                    <h3>What is your Full Name?</h3>
                     <input type="text" name="firstName" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question2', 'question1', 0)">Back</button>
@@ -66,7 +69,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question4">
-                    <h3>What is your email address?</h3>
+                    <h3>What is your Email Address?</h3>
                     <input type="email" name="email" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question4', 'question3', 2)">Back</button>
@@ -74,7 +77,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question5">
-                    <h3>What is your phone number?</h3>
+                    <h3>What is your Phone Number?</h3>
                     <input type="tel" name="phone" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question5', 'question4', 3)">Back</button>
@@ -82,7 +85,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question6">
-                    <h3>What is your date of birth?</h3>
+                    <h3>What is your Date of Birth?</h3>
                     <input type="date" name="dob" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question6', 'question5', 4)">Back</button>
@@ -90,7 +93,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question7">
-                    <h3>What is your address?</h3>
+                    <h3>What is your Address?</h3>
                     <input type="text" name="address" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question7', 'question6', 5)">Back</button>
@@ -98,7 +101,7 @@
                     </div>
                 </div>
                 <div class="question hidden" id="question8">
-                    <h3>What is your annual income?</h3>
+                    <h3>What is your Annual income?</h3>
                     <input type="number" name="income" required>
                     <div class="buttons">
                         <button type="button" class="btn" onclick="prevQuestion('question8', 'question7', 6)">Back</button>
@@ -106,7 +109,7 @@
                     </div>
                 </div>
                 <div class="hidden" id="processing">
-                    <h3>Processing your application...</h3>
+                    <h3>Processing your Application...</h3>
                     <div class="progress-container">
                         <div class="progress-bar" id="progressBar"></div>
                     </div>
