@@ -84,33 +84,33 @@
 // closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 // chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
-// Replace 'YOUR_API_KEY' with your actual API key
-const apiKey = 'AIzaSyAQYMNgusd0dulb6qFmn-aSStXq8wGqesc';
-const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+// // Replace 'YOUR_API_KEY' with your actual API key
+// const apiKey = 'AIzaSyAQYMNgusd0dulb6qFmn-aSStXq8wGqesc';
+// const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
-const data = {
-  contents: [
-    {
-      parts: [
-        {
-          text: 'Explain how AI works',
-        },
-      ],
-    },
-  ],
-};
+// const data = {
+//   contents: [
+//     {
+//       parts: [
+//         {
+//           text: "What is a credit card",
+//         },
+//       ],
+//     },
+//   ],
+// };
 
-fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-})
-  .then((response) => response.json())
-  .then((result) => {
-    console.log(result.candidates[0].content.parts[0].text);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+// fetch(url, {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+//   .then((response) => response.json())
+//   .then((result) => {
+//     console.log(result.candidates[0].content.parts[0].text);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });

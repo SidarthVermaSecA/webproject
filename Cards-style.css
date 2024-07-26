@@ -64,8 +64,25 @@ h1{
     width: 80%;
     border-radius: 20px;
     border: 2px solid white;
+    background-size: cover;
 }
 
+.card1-image{
+  background-image: url(cc1.png);
+}
+
+
+.card2-image{
+  background-image: url(cc2.png);
+}
+
+.card3-image{
+  background-image: url(cc3.png);
+}
+
+.card4-image{
+  background-image: url(cc4.png);
+}
 
 .myfooter {
     padding: 10px 0;
