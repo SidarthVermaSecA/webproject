@@ -214,29 +214,21 @@ input[type="number"]:focus {
     border-radius: 5px;
     transition: width 0.5s;
 }
-
-.button-group {
-    margin-top: 20px;
+.navigation-icons {
     display: flex;
-    justify-content: space-between;
-}
-
-.button-group .btn {
-    padding: 10px 20px;
-    margin-right: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: solid black;
-    border-radius: 5px;
-}
-
-.btn-learn-more {
-    background-color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    .navigation-icons a {
+    margin: 0 10px;
     color: black;
-    border: solid black;
-}
-
-.btn-apply-now {
-    background-color: #ffffff;
-    color: black
-}
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+    
+    .navigation-icons a:hover {
+    color: #ba4c25;
+    }
