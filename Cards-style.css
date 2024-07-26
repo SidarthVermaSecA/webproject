@@ -65,3 +65,29 @@ h1{
     border-radius: 20px;
     border: 2px solid white;
 }
+
+
+.myfooter {
+    padding: 10px 0;
+    background-color: #454546;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px; /* Increase font size */
+}
+
+.social-icons a:hover {
+    color: black;
+}
