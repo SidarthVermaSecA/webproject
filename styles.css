@@ -15,7 +15,7 @@ h1 {
 
 .navbar-brand,
 .nav-link {
-  color: black !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler {
