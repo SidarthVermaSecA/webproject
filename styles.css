@@ -10,11 +10,11 @@ body {
 }
 
 header {
-  background-color: #278abb;
+  background-color: #e50000;
 }
 
 .text-primary {
-  color: #278abb !important;
+  color: #e50000 !important;
 }
 
 .card-title {
@@ -27,7 +27,7 @@ header {
 
 .list-group-item.disabled,
 .list-group-item[aria-disabled="true"] {
-  background-color: #2f4552 !important;
+  background-color: #e50000 !important;
   color: #c5d4db !important;
   pointer-events: none;
 }
@@ -48,4 +48,20 @@ header {
 .card img {
   object-fit: cover;
   height: 300px;
+}
+.navbar {
+  background-color: #e50000;
+}
+
+.navbar-brand,
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+  background-color: var(--secondary-color);
 }
