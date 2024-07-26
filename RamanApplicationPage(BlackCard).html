@@ -1,180 +1,294 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summit Bank Application</title>
-    <link rel="stylesheet" href="stylesRaman.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="stylesRaman.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <img src="BSSS-removebg-preview.png" alt="Summit Bank Logo">
-        </div>
+      <div class="logo">
+        <img src="BSSS-removebg-preview.png" alt="Summit Bank Logo" />
+      </div>
     </header>
     <main class="main-content">
-        <section class="left-panel">
-            <div class="card-info">
-                <h2>You're Applying For:</h2>
-                <img src="black.png" alt="Summit Blue Mastercard">
-                <h3>Summit Black Mastercard®</h3>
+      <section class="left-panel">
+        <div class="card-info">
+          <h2>You're Applying For:</h2>
+          <img src="black.png" alt="Summit Blue Mastercard" />
+          <h3>Summit Black Mastercard®</h3>
+        </div>
+        <div class="card-benefits">
+          <h2>With This Card You Get:</h2>
+          <ul>
+            <li>Get 4% unlimited cash back on travel and luxury purchases.</li>
+            <li>Access to dedicated 24/7 concierge services.</li>
+            <li>
+              Complimentary global airport lounge access (up to $300 value).
+            </li>
+            <li>No annual fee for the first year.</li>
+          </ul>
+        </div>
+        <div class="navigation-icons">
+          <a href="index.html" target="_blank" aria-label="Home">
+            <i class="fas fa-home"></i>
+          </a>
+          <a href="Cards-page.html" target="_blank" aria-label="Back">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+      </section>
+      <section class="right-panel">
+        <form id="applicationForm" onsubmit="handleSubmit(event)">
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="formProgressBar"></div>
+          </div>
+          <div class="question" id="question1">
+            <h2>Before we begin, let’s make sure you’re eligible</h2>
+            <p>
+              Please have your government-issued ID ready as it may be required
+              to complete the application.
+            </p>
+            <h3>Do you have an existing Summit Bank Mastercard?</h3>
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question1', 'question2', 1)"
+              >
+                No
+              </button>
+              <button
+                type="button"
+                class="btn yes"
+                onclick="nextQuestion('question1', 'question2', 1)"
+              >
+                Yes
+              </button>
             </div>
-            <div class="card-benefits">
-                <h2>With This Card You Get:</h2>
-                <ul><li>Get 4% unlimited cash back on travel and luxury purchases.</li>
-                    <li>Access to dedicated 24/7 concierge services.</li>
-                    <li>Complimentary global airport lounge access (up to $300 value).</li>
-                    <li>No annual fee for the first year.</li>
-                </ul>
+          </div>
+          <div class="question hidden" id="question2">
+            <h3>What is your Full Name?</h3>
+            <input type="text" name="firstName" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question2', 'question1', 0)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question2', 'question3', 2)"
+              >
+                Next
+              </button>
             </div>
-            <div class="navigation-icons">
-                <a href="page1.html" target="_blank" aria-label="Home">
-                    <i class="fas fa-home"></i>
-                </a>
-                <a href="Cards-page.html" target="_blank" aria-label="Back">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+          </div>
+          <div class="question hidden" id="question3">
+            <h3>What is your Social Insurance Number?</h3>
+            <input type="text" name="lastName" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question3', 'question2', 1)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question3', 'question4', 3)"
+              >
+                Next
+              </button>
             </div>
-        </section>
-        <section class="right-panel">
-            <form id="applicationForm" onsubmit="handleSubmit(event)">
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" id="formProgressBar"></div>
-                </div>
-                <div class="question" id="question1">
-                    <h2>Before we begin, let’s make sure you’re eligible</h2>
-                    <p>Please have your government-issued ID ready as it may be required to complete the application.</p>
-                    <h3>Do you have an existing Summit Bank Mastercard?</h3>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="nextQuestion('question1', 'question2', 1)">No</button>
-                        <button type="button" class="btn yes" onclick="nextQuestion('question1', 'question2', 1)">Yes</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question2">
-                    <h3>What is your Full Name?</h3>
-                    <input type="text" name="firstName" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question2', 'question1', 0)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question2', 'question3', 2)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question3">
-                    <h3>What is your Social Insurance Number?</h3>
-                    <input type="text" name="lastName" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question3', 'question2', 1)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question3', 'question4', 3)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question4">
-                    <h3>What is your Email Address?</h3>
-                    <input type="email" name="email" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question4', 'question3', 2)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question4', 'question5', 4)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question5">
-                    <h3>What is your Phone Number?</h3>
-                    <input type="tel" name="phone" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question5', 'question4', 3)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question5', 'question6', 5)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question6">
-                    <h3>What is your Date of Birth?</h3>
-                    <input type="date" name="dob" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question6', 'question5', 4)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question6', 'question7', 6)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question7">
-                    <h3>What is your Address?</h3>
-                    <input type="text" name="address" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question7', 'question6', 5)">Back</button>
-                        <button type="button" class="btn" onclick="nextQuestion('question7', 'question8', 7)">Next</button>
-                    </div>
-                </div>
-                <div class="question hidden" id="question8">
-                    <h3>What is your Annual income?</h3>
-                    <input type="number" name="income" required>
-                    <div class="buttons">
-                        <button type="button" class="btn" onclick="prevQuestion('question8', 'question7', 6)">Back</button>
-                        <button type="submit" class="btn" onclick="handleSubmit(event)">Submit</button>
-                    </div>
-                </div>
-                <div class="hidden" id="processing">
-                    <h3>Processing your Application...</h3>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progressBar"></div>
-                    </div>
-                </div>
-                <div class="hidden" id="submitted">
-                    <h3>Your information is submitted, We will be in touch soon.</h3>
-                </div>
-            </form>
-        </section>
+          </div>
+          <div class="question hidden" id="question4">
+            <h3>What is your Email Address?</h3>
+            <input type="email" name="email" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question4', 'question3', 2)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question4', 'question5', 4)"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="question hidden" id="question5">
+            <h3>What is your Phone Number?</h3>
+            <input type="tel" name="phone" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question5', 'question4', 3)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question5', 'question6', 5)"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="question hidden" id="question6">
+            <h3>What is your Date of Birth?</h3>
+            <input type="date" name="dob" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question6', 'question5', 4)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question6', 'question7', 6)"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="question hidden" id="question7">
+            <h3>What is your Address?</h3>
+            <input type="text" name="address" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question7', 'question6', 5)"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn"
+                onclick="nextQuestion('question7', 'question8', 7)"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="question hidden" id="question8">
+            <h3>What is your Annual income?</h3>
+            <input type="number" name="income" required />
+            <div class="buttons">
+              <button
+                type="button"
+                class="btn"
+                onclick="prevQuestion('question8', 'question7', 6)"
+              >
+                Back
+              </button>
+              <button type="submit" class="btn" onclick="handleSubmit(event)">
+                Submit
+              </button>
+            </div>
+          </div>
+          <div class="hidden" id="processing">
+            <h3>Processing your Application...</h3>
+            <div class="progress-container">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+          </div>
+          <div class="hidden" id="submitted">
+            <h3>Your information is submitted, We will be in touch soon.</h3>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="Access.html" target="_blank" aria-label="Disability"><i class="fab fa-accessible-icon"></i></a>
-        </div>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="Access.html" target="_blank" aria-label="Disability"
+          ><i class="fab fa-accessible-icon"></i
+        ></a>
+      </div>
     </footer>
     <script>
-        let totalQuestions = 8;
-        let currentQuestion = 0;
+      let totalQuestions = 8;
+      let currentQuestion = 0;
 
-        function updateProgressBar(step) {
-            const progressBar = document.getElementById('formProgressBar');
-            const progressPercentage = ((step / totalQuestions) * 100) + '%';
-            progressBar.style.width = progressPercentage;
-        }
+      function updateProgressBar(step) {
+        const progressBar = document.getElementById("formProgressBar");
+        const progressPercentage = (step / totalQuestions) * 100 + "%";
+        progressBar.style.width = progressPercentage;
+      }
 
-        function nextQuestion(currentId, nextId, step) {
-            document.getElementById(currentId).classList.add('hidden');
-            document.getElementById(nextId).classList.remove('hidden');
-            currentQuestion = step;
-            updateProgressBar(step);
-        }
+      function nextQuestion(currentId, nextId, step) {
+        document.getElementById(currentId).classList.add("hidden");
+        document.getElementById(nextId).classList.remove("hidden");
+        currentQuestion = step;
+        updateProgressBar(step);
+      }
 
-        function prevQuestion(currentId, prevId, step) {
-            document.getElementById(currentId).classList.add('hidden');
-            document.getElementById(prevId).classList.remove('hidden');
-            currentQuestion = step;
-            updateProgressBar(step);
-        }
+      function prevQuestion(currentId, prevId, step) {
+        document.getElementById(currentId).classList.add("hidden");
+        document.getElementById(prevId).classList.remove("hidden");
+        currentQuestion = step;
+        updateProgressBar(step);
+      }
 
-        function handleSubmit(event) {
-            event.preventDefault();
-            document.getElementById('question8').classList.add('hidden');
-            document.getElementById('processing').classList.remove('hidden');
-            const progressBar = document.getElementById('progressBar');
-            let width = 0;
-            const interval = setInterval(() => {
-                if (width >= 100) {
-                    clearInterval(interval);
-                    document.getElementById('processing').classList.add('hidden');
-                    document.getElementById('submitted').classList.remove('hidden');
-                    updateProgressBar(totalQuestions); // Ensure progress bar is fully filled
-                } else {
-                    width++;
-                    progressBar.style.width = width + '%';
-                }
-            }, 10);
-        }
+      function handleSubmit(event) {
+        event.preventDefault();
+        document.getElementById("question8").classList.add("hidden");
+        document.getElementById("processing").classList.remove("hidden");
+        const progressBar = document.getElementById("progressBar");
+        let width = 0;
+        const interval = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(interval);
+            document.getElementById("processing").classList.add("hidden");
+            document.getElementById("submitted").classList.remove("hidden");
+            updateProgressBar(totalQuestions); // Ensure progress bar is fully filled
+          } else {
+            width++;
+            progressBar.style.width = width + "%";
+          }
+        }, 10);
+      }
 
-        // Initialize progress bar
-        updateProgressBar(currentQuestion);
+      // Initialize progress bar
+      updateProgressBar(currentQuestion);
     </script>
-</body>
+  </body>
 </html>
