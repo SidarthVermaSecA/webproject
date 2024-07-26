@@ -3,84 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>SUMMIT Bank</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="d-flex flex-column min-vh-100">
-        <header class="bg-primary text-white p-3">
-            <div class="container d-flex justify-content-between align-items-center">
-                <div class="logo h3">SUMMIT</div>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#login">Log in/Signup</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#book">Book now</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="container mt-4 flex-grow-1">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center custom-card">
-                        <div class="card-body">
-                            <h2 class="card-title">Customer Service</h2>
-                            <p><strong>Name:</strong> Peter</p>
-                            <p><strong>Email:</strong> peter_2005@gmail.com</p>
-                            <p><strong>Phone number:</strong> 416-275-3134</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center custom-card">
-                        <div class="card-body">
-                            <h2 class="card-title">Apply Now</h2>
-                            <p><a href="#apply">Click here to learn more and apply</a></p>
-                            <button class="btn btn-primary">Apply</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center custom-card">
-                        <div class="card-body">
-                            <h2 class="card-title">Book an appointment</h2>
-                            <p>Phonecall | In-person | Online</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer bg-dark text-white py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
-                        <img src="SUMMIT.png" alt="Summit Logo" class="img-fluid footer-logo">
-                    </div>
-                    <div class="col-md-4 text-center mb-3 mb-md-0">
-                        <p class="mb-0">&copy; 2024 Summit. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-4 text-center text-md-right">
-                        <a href="#contact" class="text-white">Contact Us</a> |
-                        <a href="#privacy" class="text-white">Privacy Policy</a> |
-                        <a href="#terms" class="text-white">Terms of Use</a>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12 text-center">
-                        <a href="#facebook" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#twitter" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#linkedin" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#instagram" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">SUMMIT Bank</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#investment-options">Investment Options</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#credit-cards">Credit Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#card-application">Card Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#book-appointment">Book Your Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#learn-page">Learn Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#accessibility">Accessibility</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="home">
+            <h1>Welcome to SUMMIT Bank</h1>
+            <p>Your one-stop solution for all banking needs.</p>
+        </div>
+
+    <h2 id="investment-options">Investment Options</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="Images/tfsa.jpg" class="card-img-top" alt="Investment 1">
+                <div class="card-body">
+                    <h5 class="card-title">TSFA</h5>
+                    <p class="card-text">Unlock your financial potential with our innovative banking solutions, designed to help you achieve your goals with ease and security.</p>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="Images/gic.webp" class="card-img-top" alt="Investment 2">
+                <div class="card-body">
+                    <h5 class="card-title">GIC</h5>
+                    <p class="card-text">Maximize your savings with our Guaranteed Investment Certificates (GICs) - a secure, high-interest option for steady growth and peace of mind.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="Images/rrsp.jpg" class="card-img-top" alt="Investment 3">
+                <div class="card-body">
+                    <h5 class="card-title">RRSP</h5>
+                    <p class="card-text">Maximize your retirement savings with our RRSP accounts—enjoy tax advantages today and secure a brighter financial future for tomorrow.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <h2 id="account-types">Account Types</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="account1.jpg" class="card-img-top" alt="Account 1">
+                <div class="card-body">
+                    <h5 class="card-title">Checking Account</h5>
+                    <p class="card-text">Description for Account Type 1.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="account2.jpg" class="card-img-top" alt="Account 2">
+                <div class="card-body">
+                    <h5 class="card-title">Saving Account</h5>
+                    <p class="card-text">Standard Checking Account: Provides easy access to your money through checks, debit cards, and ATMs. Often used for daily transactions like bill payments and purchases.
+                        Interest-Bearing Checking Account: Offers interest on the balance but usually requires a higher minimum balance and may have monthly fees..</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="account3.jpg" class="card-img-top" alt="Account 3">
+                <div class="card-body">
+                    <h5 class="card-title">Money Marketing Account</h5>
+                    <p class="card-text">Description for Account Type 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="credit-card-accordion">Credit Card Products</h2>
+    <div id="credit-card-accordion">
+        <div class="card">
+            <img src="Images/card1.jpg" class="img-fluid" alt="Credit Card 1">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h2>Platinum Rewards Credit Card</h2>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#credit-card-accordion">
+                <div class="card-body">
+                    <p>Maximize your rewards and enjoy travel perks while maintaining low fees and interest rates.</p>
+                    <a href="application-page.html" class="btn btn-primary">APPLY NOW</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/card2.jpg" class="img-fluid" alt="Credit Card 2">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h2>Secure Student Credit Card</h2>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#credit-card-accordion">
+                <div class="card-body">
+                    <p>Build your credit history while earning rewards on essential purchases with no annual fees.</p>
+                    <a href="application-page.html" class="btn btn-primary">APPLY NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Financial Tools</h2>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Tool 1</a>
+        <a href="#" class="list-group-item list-group-item-action">Tool 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Tool 3</a>
+    </div>
+</div>
+
+<div id="application-page" class="container mt-5">
+    <h2>Apply for Credit Card</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Overview</h3>
+            <p>Benefits of Credit Card 1:</p>
+            <ul>
+                <li>Convenience and Flexibility</li>
+                <li>Security and Protection</li>
+                <li>Financial Management Tools</li>
+            </ul>
+            <a href="index.html" class="btn btn-secondary">Home</a>
+            <a href="credit-cards.html" class="btn btn-secondary">Credit Cards</a>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
