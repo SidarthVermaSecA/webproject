@@ -9,7 +9,14 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            alert("Thank you for your feedback!");
+            // Optionally, you can also clear the form fields here
+            document.getElementById('feedbackForm').reset();
+        }
+    </script>
     <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
         <a class="navbar-brand" href="#">Accessibility at the Summit Bank</a>
         <div class="navigation-iconsH">
@@ -93,7 +100,7 @@
                     <option value="poor">Poor</option>
                 </select>
             </div>
-            <button type="submit" class="btnS">Submit Feedback</button>
+            <button type="submit" class="btnS" onclick="showMessage(event)">Submit Feedback</button>
         </form>
     </div>    
     <footer class="footer">
