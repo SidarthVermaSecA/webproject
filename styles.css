@@ -14,7 +14,7 @@ header {
 }
 
 .text-primary {
-  color: #e50000 !important;
+  color: #808080 !important;
 }
 
 .card-title {
@@ -64,4 +64,9 @@ header {
 
 .navbar-toggler-icon {
   background-color: var(--secondary-color);
+}
+
+.custom-header {
+  background-color: transparent; /* Change to any color you want */
+  color: grey; /* Change the text color if needed */
 }
