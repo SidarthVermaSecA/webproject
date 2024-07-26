@@ -1,12 +1,12 @@
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900 */
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
 
-/* .lexend-deca-<uniquifier> {
+.lexend-deca-<uniquifier> {
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-} */
+}
 body {
     font-family: Lexend Deca;
     margin: 0;
@@ -23,8 +23,8 @@ body {
 }
 
 .logo img {
-    height: 80px;
-    margin-right: 30px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .logo h1 {
