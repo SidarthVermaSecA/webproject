@@ -44,12 +44,53 @@
         >
           12:00 PM
         </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          1:00 PM
+        </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          2:00 PM
+        </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          3:00 PM
+        </button>
+        <button
+          class="list-group-item list-group-item-action"
+          onclick="bookTimeSlot(this)"
+        >
+          4:00 PM
+        </button>
         <!-- Add more time slots as needed -->
+      </div>
+      <div id="loading-container" class="text-center mt-4 d-none">
+        <div class="progress" style="height: 25px">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            Processing...
+          </div>
+        </div>
       </div>
       <div id="confirmation-container" class="text-center mt-4 d-none">
         <h3 class="text-success" id="confirmation-message">
           Appointment Confirmed
         </h3>
+        <p id="redirect-message">
+          You will be redirected in <span id="countdown">5</span> seconds...
+        </p>
       </div>
     </div>
 
@@ -78,11 +119,32 @@
           element.setAttribute("aria-disabled", "true");
           document.getElementById("times-container").classList.add("d-none");
           document
-            .getElementById("confirmation-container")
+            .getElementById("loading-container")
             .classList.remove("d-none");
-          document.getElementById(
-            "confirmation-message"
-          ).innerText = `Your appointment with ${advisor} has been confirmed for ${time}.`;
+
+          // Simulate loading with a timeout
+          setTimeout(() => {
+            document
+              .getElementById("loading-container")
+              .classList.add("d-none");
+            document
+              .getElementById("confirmation-container")
+              .classList.remove("d-none");
+            document.getElementById(
+              "confirmation-message"
+            ).innerText = `Your appointment with ${advisor} has been confirmed for ${time}.`;
+
+            let countdown = 5;
+            const countdownElement = document.getElementById("countdown");
+            const countdownInterval = setInterval(() => {
+              countdown -= 1;
+              countdownElement.innerText = countdown;
+              if (countdown === 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "appointments.html";
+              }
+            }, 1000); // Update countdown every second
+          }, 2000); // Simulate loading for 2 seconds
         };
       });
     </script>

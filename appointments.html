@@ -11,13 +11,48 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-light text-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="/images/classlogo-removebg-preview.png"
+          alt="Summit Logo"
+          style="width: 50px; height: auto"
+        />
+        <span class="ml-2">Summit Bank</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Advisors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <header class="bg-primary text-white text-center py-3">
-      <img
-        src="/images/classlogo-removebg-preview.png"
-        alt="Summit Logo"
-        class="mb-2"
-        style="width: 100px; height: auto"
-      />
       <h1>Appointment Booking</h1>
     </header>
     <div class="container mt-4">
@@ -25,7 +60,11 @@
       <div class="row justify-content-center">
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
-            <img src="john_doe.jpg" class="card-img-top" alt="John Doe" />
+            <img
+              src="images/advisor1.png"
+              class="card-img-top"
+              alt="John Doe"
+            />
             <div class="card-body text-center">
               <h5 class="card-title">John Doe</h5>
               <p class="card-text">
@@ -44,7 +83,7 @@
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
             <img
-              src="philip_defranco.jpg"
+              src="images/advisor3.png"
               class="card-img-top"
               alt="Philip Defranco"
             />
@@ -66,7 +105,7 @@
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
             <img
-              src="charlie_white.jpg"
+              src="images/advisor2.png"
               class="card-img-top"
               alt="Charlie White"
             />
@@ -88,7 +127,7 @@
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
             <img
-              src="vanessa_hudgens.jpg"
+              src="images/advisor4.png"
               class="card-img-top"
               alt="Vanessa Hudgens"
             />
@@ -110,19 +149,19 @@
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
             <img
-              src="charlie_white.jpg"
+              src="images/advisor5.png"
               class="card-img-top"
-              alt="Charlie White"
+              alt="Mark Whalberg"
             />
             <div class="card-body text-center">
               <h5 class="card-title">Mark Whalberg</h5>
               <p class="card-text">
                 <i class="fas fa-envelope"></i> charliew@summit.ca
               </p>
-              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-845-9684</p>
               <button
                 class="btn btn-primary"
-                onclick="bookAppointment('Charlie White')"
+                onclick="bookAppointment('Mark Whalberg')"
               >
                 View Availability
               </button>
@@ -132,19 +171,19 @@
         <div class="col-md-4 mb-4 d-flex">
           <div class="card flex-fill">
             <img
-              src="charlie_white.jpg"
+              src="images/advisor6.png"
               class="card-img-top"
-              alt="Charlie White"
+              alt="John Cena"
             />
             <div class="card-body text-center">
               <h5 class="card-title">John Cena</h5>
               <p class="card-text">
-                <i class="fas fa-envelope"></i> charliew@summit.ca
+                <i class="fas fa-envelope"></i> johncena@summit.ca
               </p>
-              <p class="card-text"><i class="fas fa-phone"></i> 647-589-6321</p>
+              <p class="card-text"><i class="fas fa-phone"></i> 647-256-3654</p>
               <button
                 class="btn btn-primary"
-                onclick="bookAppointment('Charlie White')"
+                onclick="bookAppointment('John Cena')"
               >
                 View Availability
               </button>
@@ -155,6 +194,9 @@
     </div>
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       function bookAppointment(advisor) {
         window.location.href =
