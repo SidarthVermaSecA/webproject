@@ -1,0 +1,116 @@
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesRaman.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            alert("Thank you for your feedback!");
+            // Optionally, you can also clear the form fields here
+            document.getElementById('feedbackForm').reset();
+        }
+    </script>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
+        <a class="navbar-brand" href="#">Accessibility at the Summit Bank</a>
+        <div class="navigation-iconsH">
+            <a href="page1.html" target="_blank" aria-label="Home">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Statement</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Website Accessibility</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">See More</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Contact Us</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Feedback</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="margin-top: 60px;">
+        <h4 id="scrollspyHeading1">Accessibility Statement</h4>
+        <p>Summit Bank is committed to ensuring our services are consistently accessible and able to meet the needs of all our clients. It’s important that we continually seek to improve our services in order to provide the best possible experience for every individual. We recognize that our mission to make more possible for every Canadian is only achievable if our services are holistically accessible. To this end, we strive to provide an inclusive and accessible experience for all, and we welcome any questions or feedback regarding our ability to do so.</p>
+        <h4 id="scrollspyHeading2">Website Accessibility</h4>
+        <p>Our goal is to constantly improve the experience of our website, online banking portal, and mobile app to make it easier for our cardholders with disabilities to access our services. Here are some of the ways we accomplish this:
+        </p>
+        <ul>
+            <li>Ensuring content is easy to read and provides adequate contrast.</li>
+            <li>Making it easy for users to read or hear content, providing alternative communications for visuals, and making text compatible with assistive technologies.</li>
+            <li>Creating content that is adaptable to different screens without losing structure or information.</li>
+            <li>Providing easy ways to navigate and find information.</li>
+        </ul>
+        <p>
+            We continually review all of our digital properties to adhere to the World Wide Web Consortium (W3C) Web Content Accessibility Guidelines. We are actively working to achieve website compliance with applicable Accessibility and Disability regulations.
+        </p></p>
+        <h4 id="scrollspyHeading3">Contact Us</h4>
+        <p>
+        At Summit Bank, we value our customers and are here to assist you with any questions or concerns you may have. Whether you need help with your account, have inquiries about our services, or need support with our online banking platform, our team is ready to help.
+        </p>
+        <p>
+        You can reach us through the following channels:
+        </p>
+        <ul>
+        <li><strong>Phone:</strong> Call us at <a href="tel:+1234567890">+1 (234) 567-890</a> for immediate assistance.</li>
+        <li><strong>Email:</strong> Send us an email at <a href="mailto:support@summitbank.com">support@summitbank.com</a> and we will get back to you within 24 hours.</li>
+        <li><strong>Live Chat:</strong> Chat with our support team directly through our website for real-time assistance.</li>
+        <li><strong>Visit Us:</strong> Our branches are open Monday to Friday from 9 AM to 5 PM. Find your nearest branch <a href="branches.html" target="_blank">here</a>.</li>
+        </ul>
+         <p>
+        We also welcome your feedback. If you have any suggestions on how we can improve our services, please let us know. Your input is invaluable in helping us provide the best possible experience for all our customers.
+        </p>
+    </div>
+    <h4 id="scrollspyHeading4">Feedback Form</h4>
+    <div class="feedback-form">
+        <h2>We Value Your Feedback</h2>
+        <p>
+            At Summit Bank, your opinion matters. We strive to provide the best possible service and your feedback helps us understand what we're doing right and where we can improve. Please take a moment to share your thoughts with us.
+        </p>
+        <form action="submit_feedback.php" method="post">
+            <div class="form-group">
+                <label for="name">Name (optional):</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email (optional):</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rate Our Service:</label>
+                <select id="rating" name="rating">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <button type="submit" class="btnS" onclick="showMessage(event)">Submit Feedback</button>
+        </form>
+    </div>    
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="Access.html" target="_blank" aria-label="Disability"><i class="fab fa-accessible-icon"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
