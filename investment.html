@@ -15,6 +15,36 @@
       href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Sirin+Stencil&display=swap"
       rel="stylesheet"
     />
+    <style>
+.arrow-button {
+    background-color: transparent;
+    border: 2px solid #e50000;
+    border-radius: 50%;
+    width: 44px; /* Ensure width and height are the same to maintain circular shape */
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.arrow-button svg {
+    stroke: #e50000;
+    transition: stroke 0.3s;
+}
+
+.arrow-button:hover {
+    background-color: #e50000;
+}
+
+.arrow-button:hover svg {
+    stroke: #fff;
+}
+
+
+
+  </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -109,13 +139,17 @@
             </p>
           </div>
           <div class="modal-footer">
-            <button
+            <a href="signup.html" class="btn btn-secondary" role="button" onclick="closeModalAndRedirect();">
+              Sign Up
+            </a>
+            
+            <!-- <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Sign Up
-            </button>
+            </button> -->
             <button
               type="button"
               class="btn btn-primary"
@@ -171,14 +205,13 @@
             <div class="card-body">
               <h5 class="card-title" style="color: #e50000;">RRSP Account</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Allows you to save for retirement on a tax-deferred basis, making it an excellent way to secure your financial future.
               </p>
-              <button class="arrow-button">
+              <a href="accounts.html#collapseRRSP" class="arrow-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-              </button>
+            </a>
             </div>
           </div>
         </div>
@@ -187,14 +220,13 @@
             <div class="card-body">
               <h5 class="card-title" style="color: #e50000;">TFSA Account</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Offers flexibility and tax-free growth on your investments, allowing you to withdraw funds at any time without penalty.
               </p>
-              <button class="arrow-button">
+              <a href="accounts.html#collapseTFSA" class="arrow-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-              </button>
+            </a>
             </div>
           </div>
         </div>
@@ -203,13 +235,16 @@
             <div class="card-body">
               <h5 class="card-title" style="color: #e50000;">FHSA Account</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Designed to help first-time homebuyers save up for their initial home purchase, with contributions being tax-deductible.
               </p>
-              <button class="arrow-button">
+              <a href="accounts.html#collapseFHSA" class="arrow-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-              </button>
+            </a>
+            
+            
+            
             </div>
           </div>
         </div>
@@ -227,5 +262,12 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>function closeModalAndRedirect() {
+      var myModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+      myModal.hide();
+      window.location.href = 'signup.html'; // Redirect after the modal closes
+    }
+    </script>
+    <script></script>
   </body>
 </html>
